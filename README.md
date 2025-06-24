@@ -2,7 +2,7 @@
 
 ## 📌 What is Onion-LO
 
-Onion-LO is a general-purpose LiDAR odometry framework that supports various types of LiDAR sensors and diverse complex scenarios, addressing the robustness issues faced by traditional methods under changes in hardware and environment.
+Onion-LO is a general-purpose LiDAR odometry framework that supports a wide range of LiDAR types and complex scenarios, addressing the robustness limitations of traditional methods under varying hardware and environmental conditions. It is designed for seamless operation across diverse platforms, including high-altitude mapping, underground garages, handheld mapping, and autonomous driving applications.
 
 ### ✅ 1. System overview
 
@@ -12,6 +12,7 @@ Onion-LO is a general-purpose LiDAR odometry framework that supports various typ
 
 ### ✅ 2. Seamlessly supports various LiDAR types and diverse scenarios
 
+Supports the vast majority of LiDAR models available on the market, including Livox, Ouster, Hesai, Robosense, and Velodyne.
 <div align="center">
   <img src="onion_lo/doc/2.png" width="800">
 </div>
