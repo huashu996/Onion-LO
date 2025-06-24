@@ -25,11 +25,11 @@ Onion-LO is a general-purpose LiDAR odometry framework that supports various typ
 | SEU_A      | ![](onion_lo/doc/seua.gif) | SEU_G      | ![](onion_lo/doc/seug.gif) |
 ---
 
-## ⚙️ Dependency
+## ⚙️ Install
 
 Recommended System **Ubuntu 20.04 + ROS Noetic**
 
-### 🔧 Build
+### 🔧 Dependency
 
 ```bash
 # 1. Livox SDK
@@ -70,7 +70,7 @@ sudo apt-get install liboctomap-dev
 sudo apt install ros-noetic-octomap ros-noetic-octomap-rviz
 ```
 
-### 🔧 Install
+### 🔧 Build
 ```bash
 git clone 
 cd onion-lo
