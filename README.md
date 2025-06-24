@@ -19,7 +19,7 @@ Onion-LO is a general-purpose LiDAR odometry framework that supports various typ
 ### ✅ 3. Demo
 
 
-| Dataset 1 | Demo 1 | Dataset 2 | Demo 2 |
+| Dataset | Demo | Dataset | Demo |
 |-----------|--------|-----------|--------|
 | KITTI     | ![](onion_lo/doc/kitti.gif) | NCLT      | ![](onion_lo/doc/nclt.gif) |
 | NTU       | ![](onion_lo/doc/ntu.gif) | HILTI     | ![](onion_lo/doc/hilti.gif) |
