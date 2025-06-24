@@ -1,0 +1,18 @@
+common:          
+   pcd_save_en: false  
+   Save_path: true
+   ROOT_DIR: "/Onion-LO/src/onion_lo/results/"
+   lidar_topic: "/livox/lidar"      
+   save_frame_num_beg: 1
+   save_frame_num_end: 200
+   child_frame: "base_link"
+   odom_frame: "odom"
+
+kiss_l:
+   voxel_size: 2.0
+   lidar_type: "LIVOX"
+   Deskew: true
+   exp_key_num: 1000
+   Resolution_h: 1.0
+   Resolution_v: 1.0
+
