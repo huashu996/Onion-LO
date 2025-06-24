@@ -4,27 +4,26 @@
 
 Onion-LO is a general-purpose LiDAR odometry framework that supports various types of LiDAR sensors and diverse complex scenarios, addressing the robustness issues faced by traditional methods under changes in hardware and environment.
 
-### ✅ System overview
+### ✅ 1. System overview
 
 <div align="center">
-  <img src="doc/1.png" width="600">
+  <img src="doc/1.png" width="800">
 </div>
 
-### ✅ Illustration of Multi-Scenario & Multi-LiDAR Support
+### ✅ 2. Illustration of Multi-Scenario & Multi-LiDAR Support
 
 <div align="center">
-  <img src="doc/2.png" width="600">
+  <img src="doc/2.png" width="800">
 </div>
 
-### ✅ Demo
+### ✅ 3. Demo
 
 
 | Dataset 1 | Demo 1 | Dataset 2 | Demo 2 |
 |-----------|--------|-----------|--------|
 | KITTI     | ![](doc/kitti.gif) | NCLT      | ![](doc/nclt.gif) |
 | NTU       | ![](doc/ntu.gif) | HILTI     | ![](doc/hilti.gif) |
-| SEUA      | ![](doc/seua.gif) | SEUG      | ![](doc/seug.gif) |
-
+| SEU_A      | ![](doc/seua.gif) | SEU_G      | ![](doc/seug.gif) |
 ---
 
 ## ⚙️ Dependency
@@ -70,15 +69,21 @@ sudo apt-get install ros-noetic-tf2-sensor-msgs
 sudo apt-get install ros-noetic-eigen-conversions
 sudo apt-get install liboctomap-dev
 sudo apt install ros-noetic-octomap ros-noetic-octomap-rviz
+```
 
-# 9. Install
-
-## ⚙️ Run
-After modifying the config file for your environment, you can run Onion-LO. Here is an example to test it with a Livox LiDAR.
-<pre> ```
+### 🔧 Install
+```bash
+git clone 
+cd onion-lo
+catkin_make
 source devel/setup.bash
+```
+
+### 🔧 Run
+After modifying the config file for your environment, you can run Onion-LO. Here is an example to test it with a Livox LiDAR.
+```bash
 roslaunch onion-lv livox.launch
 rosbag play your_data.bag
-``` </pre>
+```
 
 
