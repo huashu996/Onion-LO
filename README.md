@@ -10,14 +10,13 @@ Onion-LO is a general-purpose LiDAR odometry framework that supports various typ
   <img src="onion_lo/doc/1.png" width="800">
 </div>
 
-### ✅ 2. Illustration of Multi-Scenario & Multi-LiDAR Support
+### ✅ 2. Seamlessly supports various LiDAR types and diverse scenarios
 
 <div align="center">
   <img src="onion_lo/doc/2.png" width="800">
 </div>
 
 ### ✅ 3. Demo
-
 
 | Dataset | Demo | Dataset | Demo |
 |-----------|--------|-----------|--------|
