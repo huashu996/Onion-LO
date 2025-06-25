@@ -17,8 +17,11 @@
 std::mutex print_mutex;
 using namespace std;
 class Onion {
-private:
+public:
     double layer_thickness = 5;
+    double onion_angle = 3.0;
+private:
+    //---------------------------------------
     int seg_min_num = 5;
     int exp_key_num = 1200;
     double min_range = 0.0;
@@ -322,7 +325,7 @@ Vector6dVector Classifier() {
             if (layer.R >= 1.0 && layer.R < 50.0 && block.points.size() > 30) {
                 double R = layer.R * layer_thickness;
                 double class_size = std::round(R * std::sin(3.0 *seg_angle * M_PI / 180.0) * 10.0) / 10.0;
-                double v_size = std::round(R * std::sin(3.0 * M_PI / 180.0) * 10.0) / 10.0;
+                double v_size = std::round(R * std::sin(onion_angle * M_PI / 180.0) * 10.0) / 10.0;
                 Vector6dVector plane_points_local;
                 Vector6dVector no_plane_points_local;
                 Vector6dVector total_points;

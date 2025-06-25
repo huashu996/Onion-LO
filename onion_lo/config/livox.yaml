@@ -10,9 +10,10 @@ common:
 
 kiss_l:
    voxel_size: 2.0
-   lidar_type: "LIVOX"
-   Deskew: true
    exp_key_num: 1000
    Resolution_h: 1.0
    Resolution_v: 1.0
+   lidar_type: "LIVOX"
+   Deskew: true
+
 
