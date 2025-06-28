@@ -263,7 +263,7 @@ void Color_VoxelHashMap::Color_AddPoints(const std::vector<Vector6d> &points) {
 void Color_VoxelHashMap::Color_RemovePointsFarFromLocation(const Eigen::Vector3d &origin) {
     for (const auto &[voxel, voxel_block] : colormap_) {
             const auto &pt = voxel_block.points.front();
-		    if ((pt.head<3>() - origin).norm() > (1000) ) {
+		    if ((pt.head<3>() - origin).norm() > (500) ) {
 		    	colormap_.erase(voxel);
 		    }
        }

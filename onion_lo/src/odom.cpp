@@ -44,13 +44,16 @@ Vector6dVector Onion_Odom::RegisterFrame(const Vector6dVector color_frame, const
 	new_pose = Color_RegisterFrame(color_frame,
                                           initial_guess,
                                           factor);
+    
     color_local_map_.dis_ = 0.5*factor;
-    if (3*color_local_map_.dis_<0.5*color_local_map_.voxel_size_)
+    if (3*color_local_map_.dis_<0.5*1.732*color_local_map_.voxel_size_)
     	color_local_map_.num_range_ = 0;
-    else if (3*color_local_map_.dis_<1.5*color_local_map_.voxel_size_)
+    else if (3*color_local_map_.dis_<1.5*1.732*color_local_map_.voxel_size_)
     	color_local_map_.num_range_ = 1;
     else
     	color_local_map_.num_range_ = 2;
+    cout<<"color_local_map_.dis_-----------"<<color_local_map_.dis_<<endl;
+    cout<<"color_local_map_.num_range_-----------"<<color_local_map_.num_range_<<endl;
     color_local_map_.Color_Update(map_frame, new_pose);
 	scan_num++;
 	return color_frame;
@@ -87,7 +90,7 @@ Sophus::SE3d AlignClouds(const Vector6dVector &source,
             for (auto i = r.begin(); i < r.end(); ++i) {
                 const auto &[J_r, pos_residual] = compute_jacobian_and_residual(i);
                 double depth = source[i].template head<3>().norm();
-                double depth_weight = 1.0 / (depth + 1e-3);
+                double depth_weight = 1.0 / (depth + 1e-1);
                 double w = Weight(pos_residual.norm(), th) * depth_weight;
                 JTJ_private.noalias() += J_r.transpose() * w * J_r;
                 JTr_private.noalias() += J_r.transpose() * w * pos_residual;
