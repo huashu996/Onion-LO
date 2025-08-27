@@ -75,8 +75,9 @@ sudo apt install ros-noetic-octomap ros-noetic-octomap-rviz
 
 ### 🔧 Build
 ```bash
-git clone 
+sudo mkdir onion-lo
 cd onion-lo
+git clone git@github.com:huashu996/Onion-LO.git
 catkin_make
 source devel/setup.bash
 ```
