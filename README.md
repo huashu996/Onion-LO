@@ -79,7 +79,7 @@ mkdir -p ~/onion_lo_ws/src
 cd ~/onion_lo_ws/src
 git clone git@github.com:huashu996/Onion-LO.git
 cd..
-catkin_make
+catkin_makewangyi
 source devel/setup.bash
 ```
 ### 🔧 Parameters
